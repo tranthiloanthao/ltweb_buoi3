@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 5</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<div id="KetQua"></div>
+		<script>
+			function ThoiGian()
+			{
+				var hT = new Date();
+				var gio = hT.getHours();
+				var phut = hT.getMinutes();
+				var giay = hT.getSeconds();
+				
+				//document.write('Bây giờ là ' + gio + ':' + phut + ':' + giay);
+				document.getElementById('KetQua').innerHTML='Bây giờ là ' + gio + ':' + phut + ':' + giay;
+				
+				//Sau 1 giây thì gọi lại hàm ThoiGian
+				setTimeout(ThoiGian, 1000);
+			}
+			ThoiGian();
+		</script>
+	</body>
+</html>
